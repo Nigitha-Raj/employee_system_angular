@@ -1,0 +1,32 @@
+<table class="table table-bordered">
+      <thead>
+            <tr>
+                  <th>S.NO</th>
+                  <th>Role</th>
+      </tr>         
+      </thead>
+      <tbody>
+            <tr *ngFor="let item of roleList;let srno=index">
+                  <td>{{srno+1}}</td>
+                  <td>{{item.role}}</td>
+            </tr>
+
+      </tbody>
+</table>
+
+<!-- <div class="row">
+      <div class="col-4">
+            <ul>
+                  <li *ngFor="let item of roleList" >{{item.role}}</li>
+            </ul>
+      </div>
+      <div class="col-4">
+            
+                  <select>
+                     <option *ngFor="let item of roleList" [value]="item.roleId">{{item.role}}</option>   
+                  </select> 
+           
+      </div>
+</div>
+
+ -->

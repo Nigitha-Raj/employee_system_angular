@@ -27,6 +27,7 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -84,7 +85,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
+            "styles": [              
               "src/styles.css"
             ],
             "scripts": []
