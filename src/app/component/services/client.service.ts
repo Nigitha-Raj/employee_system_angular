@@ -30,5 +30,9 @@ export class ClientService {
     {
        return this.http.delete<APIResponseModel>(environment.API_URL+"DeleteClientByClientId")
     }
-  
+    addUpdateClientProject(clientObj:Client):Observable<APIResponseModel>
+    {
+       return this.http.post<APIResponseModel>(environment.API_URL+"AddUpdateClientProject",clientObj)
+    }
+   
 }

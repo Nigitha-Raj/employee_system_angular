@@ -101,16 +101,20 @@
                                           <label for="Name" >Client ID</label>
                                           <select class="form-control" formControlName="clientId">
                                                 <option value=""> select Client    </option>
+                                                @for(item of clientList;track $index)
+                                                {                                               
+                                                      <option [value]="item.clientId">{{item.companyName}}</option>                                                       
+                                                } 
                                           </select>                                         
                                     </div>
                                     <div class="col-6">
                                           <label for="Name" >leadby</label>
                                           <select formControlName="leadByEmpId" class="form-control">
                                                 <option value="">select the Emp</option>  
-                                          <!-- @for(item of employeeList;track $index)
+                                          @for(item of employeeList;track $index)
                                           {                                               
                                                 <option [value]="item.empId">{{item.empName}} - {{item.empCode}}</option>                                                       
-                                          }   -->
+                                          }  
                                     </select>                                           
                                     </div>
                                     <div class="row pt-2" >
@@ -118,7 +122,7 @@
                                                 <button class="btn btn-secondary">Reset</button>
                                           </div>
                                           <div class="col-6 text-center">
-                                                <button class="btn btn-success">Add</button> 
+                                                <button class="btn btn-success" (click)="onSaveProject()">Save</button> 
                                           </div>
                                     </div>
                                    </div> 
