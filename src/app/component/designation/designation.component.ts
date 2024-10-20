@@ -1,7 +1,8 @@
-import { IDesignation } from './../../model/interface/role';
+import { IDesignation, IRoles } from './../../model/interface/role';
 import { APIResponseModel } from '../../model/interface/role';
 import { Component,inject,Inject,OnInit} from '@angular/core';
 import { MasterService } from '../services/master.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-designation',
@@ -12,18 +13,21 @@ import { MasterService } from '../services/master.service';
 })
 export class DesignationComponent implements OnInit{
   designationList : IDesignation[] =[]; 
+  isLoader: boolean = true;
   MasterService = inject(MasterService);
-
+ 
   ngOnInit(): void {
     this.MasterService.getAllDesignation().subscribe(
       (response: APIResponseModel) => {
-        // Handle successful response
-        console.log(response);
+        this.designationList = response.data  
+        this.isLoader = false     
+        // Handle successful response        
       },
       (error: any) => {
+        this.isLoader =true
         // Handle error response
         console.error('Error fetching designations', error);
       }
-    );
+    );   
   }
 }

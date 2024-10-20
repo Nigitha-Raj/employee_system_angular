@@ -1,0 +1,130 @@
+<div class="row">
+      <div class="col-8">
+            <div class="card">
+                  <div class="card-header bg-success" >
+                    Client List
+                  </div>
+                  <div class="card-body">
+                        <div class="row">
+                              <div class="col-12">
+                                    <table class="table table-bordered">
+                                          <thead>
+                                                <tr>
+                                                      <th>S.NO</th>                                                     
+                                                      <th>Company Name</th>
+                                                      <th>Person Name</th>
+                                                      <th>Contact No</th>
+                                                      <th>City</th>
+                                                      <th>Action</th>                                                     
+                                                      
+                                          </tr>         
+                                          </thead>
+                                          <tbody>
+                                                <!-- @for(item of clientList;track $index)
+                                                {
+                                                      
+                                                     <tr>
+                                                      <td>{{$index+1}}</td> 
+                                                      <td>{{item.companyName}}</td>
+                                                      <td>{{item.contactPersonName}}</td>
+                                                      <td>{{item.contactNo}}</td>
+                                                      <td>{{item.city}}</td>
+                                                      <td>
+                                                            <button class="btn btn-primary" (click)="onEdit(item)">Edit</button>
+                                                            <button class="btn btn-danger" (click) ="onDelete(item.clientId )">Delete</button>
+                                                      </td>
+                                                     </tr>
+                                                           
+                                                     
+                                                }
+                                               -->
+                                    
+                                          </tbody>
+                                    </table>
+                              </div>      
+                        </div>                           
+                  </div>
+            </div>
+      </div>
+      <div class="col-4">
+            <div class="card">
+                  <div class="card-header bg-success" >
+                    Client List
+                  </div>
+                  <div class="card-body">
+                        <form [formGroup]="projectForm">
+                              <div class="row">
+                                    <div class="col-6">
+                                          <label for="Name" >Project Name</label>
+                                          <input type="text" formControlName="projectName" class="form-control">                                                          
+                                    </div>
+                                    <div class="col-6">
+                                          <label for="Name" >Start Date</label>
+                                          <input type="date"formControlName="startDate" class="form-control"  >
+                                    </div>
+                                    <div class="col-6">
+                                          <label for="Name" >Expected End Date</label>
+                                          <input type="date"formControlName="expectedEndDate" class="form-control" >
+                                    </div>
+            
+                                   
+                                    <div class="col-6">
+                                          <label for="Name" >Completed Date</label>
+                                          <input type="date" formControlName="completedDate" class="form-control" >
+                                    </div>
+                                    <div class="col-6">
+                                          <label for="Name" >Contact Person</label>
+                                          <input type="text" formControlName="contactPerson" class="form-control"  >
+                                    </div>
+                                    <div class="col-6">
+                                          <label for="Name">Contact No</label>
+                                         <textarea class="form-control"  formControlName="contactPersonContactNo"></textarea>
+                                    </div>
+                                    <div class="col-6">
+                                          <label for="Name" >Employee Strength</label>
+                                          <input type="text" class="form-control" formControlName="totalEmpWorking" >
+                                    </div>
+                                    <div class="col-6">
+                                          <label for="Name">Project Cost</label>
+                                          <input type="text" class="form-control" formControlName="projectCost" >
+                                    </div>
+                                    <div class="col-6">
+                                          <label for="Name" >Project Description</label>
+                                          <input type="text" class="form-control" formControlName="projectDetails" >
+                                    </div>
+                                    <div class="col-6">
+                                          <label for="Name" >Email ID</label>
+                                          <input type="text" class="form-control" formControlName="contactPersonEmailId">
+                                    </div>
+
+                                    <div class="col-6">
+                                          <label for="Name" >Client ID</label>
+                                          <select class="form-control" formControlName="clientId">
+                                                <option value=""> select Client    </option>
+                                          </select>                                         
+                                    </div>
+                                    <div class="col-6">
+                                          <label for="Name" >leadby</label>
+                                          <select formControlName="leadByEmpId" class="form-control">
+                                                <option value="">select the Emp</option>  
+                                          <!-- @for(item of employeeList;track $index)
+                                          {                                               
+                                                <option [value]="item.empId">{{item.empName}} - {{item.empCode}}</option>                                                       
+                                          }   -->
+                                    </select>                                           
+                                    </div>
+                                    <div class="row pt-2" >
+                                          <div class="col-6 text-center">
+                                                <button class="btn btn-secondary">Reset</button>
+                                          </div>
+                                          <div class="col-6 text-center">
+                                                <button class="btn btn-success">Add</button> 
+                                          </div>
+                                    </div>
+                                   </div> 
+                        </form>
+                     
+                  </div>
+            </div>
+      </div>
+</div>

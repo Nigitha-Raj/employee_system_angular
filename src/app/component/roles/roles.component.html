@@ -1,18 +1,23 @@
-<table class="table table-bordered">
-      <thead>
-            <tr>
-                  <th>S.NO</th>
-                  <th>Role</th>
-      </tr>         
-      </thead>
-      <tbody>
-            <tr *ngFor="let item of roleList;let srno=index">
-                  <td>{{srno+1}}</td>
-                  <td>{{item.role}}</td>
-            </tr>
+<div class="row">
+      <div class="col-12">
+            <table class="table table-bordered">
+                  <thead>
+                        <tr>
+                              <th>S.NO</th>
+                              <th>Role</th>
+                  </tr>         
+                  </thead>
+                  <tbody>
+                        <tr *ngFor="let item of roleList;let srno=index">
+                              <td>{{srno+1}}</td>
+                              <td>{{item.role}}</td>
+                        </tr>
+            
+                  </tbody>
+            </table>
+      </div>      
+</div>
 
-      </tbody>
-</table>
 
 <!-- <div class="row">
       <div class="col-4">
