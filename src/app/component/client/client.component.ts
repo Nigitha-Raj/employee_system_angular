@@ -3,11 +3,13 @@ import { Client } from '../../model/class/client';
 import { Component, inject, OnInit } from '@angular/core';
 import { ClientService } from '../services/client.service';
 import { APIResponseModel } from '../../model/interface/role';
+import { UpperCasePipe } from '@angular/common';
+import { AlertComponent } from '../../reusableComponent/alert/alert.component';
 
 @Component({
   selector: 'app-client',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,UpperCasePipe,AlertComponent],
   templateUrl: './client.component.html',
   styleUrl: './client.component.css'
 })

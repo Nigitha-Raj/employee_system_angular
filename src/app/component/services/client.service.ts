@@ -1,9 +1,10 @@
+import { environment } from './../../../environments/environment';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '../../../environments/environment';
 import { Client } from '../../model/class/client';
 import { APIResponseModel } from '../../model/interface/role';
+import { constant } from '../../constant/constant';
 
 @Injectable({
   providedIn: 'root'
@@ -34,5 +35,9 @@ export class ClientService {
     {
        return this.http.post<APIResponseModel>(environment.API_URL+"AddUpdateClientProject",clientObj)
     }
+    getAllClientProject():Observable<APIResponseModel>{
+      return this.http.get<APIResponseModel>(environment.API_URL + constant.API_METHOD.GET_ALL_PROJECT)
+    }
+
    
 }
