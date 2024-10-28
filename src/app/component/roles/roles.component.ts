@@ -21,7 +21,7 @@ export class RolesComponent implements OnInit{
 
 getAllRole()
 {
-  this.http.get<APIResponseModel>('https://freeapi.miniprojectideas.com/api/ClientStrive/GetAllRoles').subscribe((res:APIResponseModel)=>
+  this.http.get<APIResponseModel>('https://cors-anywhere.herokuapp.com/https://freeapi.miniprojectideas.com/api/ClientStrive/GetAllRoles').subscribe((res:APIResponseModel)=>
   {
    this.roleList = res.data;
   })

@@ -11,6 +11,6 @@ export class MasterService {
   constructor(private http:HttpClient) { }
   getAllDesignation():Observable<APIResponseModel>
   {
-    return this.http.get<APIResponseModel>("https://freeapi.miniprojectideas.com/api/ClientStrive/GetAllDesignation")
+    return this.http.get<APIResponseModel>("https://cors-anywhere.herokuapp.com/https://freeapi.miniprojectideas.com/api/ClientStrive/GetAllDesignation")
   }
 }
